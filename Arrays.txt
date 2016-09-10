@@ -1,0 +1,98 @@
+package ArraysPack;
+import java.io.*;
+public class SingleDimensionalArrayusingforloop
+{
+
+	public static void main(String[] args) throws NumberFormatException, IOException 
+	{
+		int [] a=new int [5];
+		//declaring inputs in runtime//
+		InputStreamReader istream = new InputStreamReader(System.in);
+		BufferedReader b = new BufferedReader(istream);
+			
+			//Storing the values in variable//
+			System.out.println("Please enter any five integer values:");
+			for(int i = 0;i<a.length;i++)
+			{
+				System.out.println("a["+ i +"]= ");
+				a[i]=Integer.parseInt(b.readLine());			
+			}
+			//displaying the values//
+		System.out.println("The Give five Integer values are.....");
+		for (int i = 0;i<a.length;i++)
+		{
+			System.out.println(a[i]);
+		}
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+------------------------------------------------------------------------------------------
+package ArraysPack;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+public class InputOutputUsingArrayModel 
+{
+	public int[] Calculator(int[] x)
+	{
+		int a=x[0]+x[1];
+		int b=x[0]-x[1];
+		int c=x[0]*x[1];
+		int d=x[0]/x[1];
+		int e=x[0]%x[1];
+		
+		// declare the array variable.
+		int[] res=new int[5];
+		
+		res[0]=a;
+		res[1]=b;
+		res[2]=c;
+		res[3]=d;
+		res[4]=e;
+		
+		
+		return res;
+	}
+
+	public static void main(String[] args) throws NumberFormatException, IOException 
+	{
+		
+		InputOutputUsingArrayModel obj=new InputOutputUsingArrayModel();
+		
+		
+		// declare the array variables
+		int[] a=new int[2];
+		
+		
+		// declare inpustream and bufferreeader object
+		InputStreamReader is=new InputStreamReader(System.in);
+		BufferedReader b=new BufferedReader(is);
+				
+		// stroe the valures in array
+		System.out.println("Enter First value : ");
+		a[0]=Integer.parseInt(b.readLine());	
+		
+		System.out.println("Enter Second value : ");
+		a[1]=Integer.parseInt(b.readLine());			
+		
+		
+		int[] r=obj.Calculator(a);
+		
+		System.out.println("Addition value : "+r[0]);
+		System.out.println("Subtraction value : "+r[1]);
+		System.out.println("Multiplication value : "+r[2]);
+		System.out.println("Division value : "+r[3]);
+		System.out.println("Remainder value : "+r[4]);
+				
+
+	}
+		
+
+
+
+}
+--------------------------------------------------------------------------------------------------
